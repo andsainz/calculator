@@ -14,7 +14,10 @@ const addInput = value => {
 }
 
 const calculateResult = () => {
-  setInput(evaluate(input));
+  if (input) {
+    setInput(evaluate(input))
+  }
+  ;
 }
 
 
