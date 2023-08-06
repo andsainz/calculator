@@ -1,13 +1,13 @@
 .clear-button{
 height: 7vh;
+width: 15vh;
 display: flex;
-flex: 1;
 justify-content: center;
 align-items: center;
 font-weight: bold;
 font-size:1.7rem;
-background-color: rgb(193, 237, 255);
-color:orangered;
+background-color: rgb(59, 65, 68);
+color:whitesmoke;
 border-radius: 1rem;
 margin: 4px;
 margin-top: 10px;

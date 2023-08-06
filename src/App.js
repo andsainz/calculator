@@ -4,6 +4,7 @@ import Button from './components/Button';
 import Screem from './components/Screem';
 import ClearButton from './components/Clear-button';
 import { useState } from 'react';
+import { evaluate } from 'mathjs';
 
 function App() {
 
@@ -13,6 +14,13 @@ function App() {
    setInput(input + val);
   };
 
+  const calculateResults= () =>{
+    if (input) {
+      setInput(evaluate(input));
+  } else {
+    alert("Plese add value to calculate the results");
+  }
+};
  return(
   <div className='App'>
     <div className='logo-container'>
@@ -43,7 +51,7 @@ function App() {
         <Button manageClick={addInput}>*</Button>
         </div>
         <div className='row'>
-        <Button manageClick={addInput}>=</Button>
+        <Button manageClick={calculateResults}>=</Button>
         <Button manageClick={addInput}>0</Button>
         <Button manageClick={addInput}>.</Button>
         <Button manageClick={addInput}>/</Button>
